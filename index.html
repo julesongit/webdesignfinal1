@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+  <body>
+    <nav>
+      <div class="menu">
+        <div class="logo">
+          <a href="#">Adopt A Pet</a>
+        </div>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="img">
+      <div class="center">
+        <div class="title">Adopt A Pup</div>
+        <div class="sub_title"></div>
+        <div class="btns">
+          <button>Learn More</button>
+          <button>Subscribe</button>
+        </div>
+      </div>
+    </div>
+    <div id="about" class="about">
+      <h1>About us</h1>
+      <div class="tab">
+        <button class="tablinks active" onclick="openCity(event, 'Mission')">
+          Mission
+        </button>
+        <button class="tablinks" onclick="openCity(event, 'Vision')">
+          Vision
+        </button>
+        <button class="tablinks" onclick="openCity(event, 'Values')">
+          Values
+        </button>
+      </div>
+      <div id="Mission" class="tabcontent" style="display: block">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eros
+          ipsum, pellentesque ut massa convallis, porttitor vestibulum leo.
+          Quisque sagittis metus et quam eleifend, sit amet ultrices libero
+          pretium.
+        </p>
+      </div>
+
+      <div id="Vision" class="tabcontent">
+        <p>In pharetra neque sit amet finibus consectetur.,</p>
+      </div>
+
+      <div id="Values" class="tabcontent">
+        <p>
+          usce eu nulla id lacus imperdiet consequat. Pellentesque posuere
+          lectus sollicitudin lectus commodo ornare.
+        </p>
+      </div>
+    </div>
+
+    <div class="services-section" id="services">
+      <h1>Services</h1>
+
+      <div class="slideshow-container">
+        <div class="mySlides">
+          <q>In pharetra neque sit amet finibus consectetur. </q>
+          <p class="author">- sit finibus</p>
+        </div>
+
+        <div class="mySlides">
+          <q
+            >usce eu nulla id lacus imperdiet consequat. Pellentesque posuere
+            lectus sollicitudin lectus commodo ornare..</q
+          >
+          <p class="author">- lay lacus</p>
+        </div>
+
+        <div class="mySlides">
+          <q
+            >Quisque rutrum magna non est vestibulum maximus. Maecenas finibus
+            nunc at elit consectetur imperdiet. Sed eget justo fermentum augue
+            dapibus convallis.</q
+          >
+          <p class="author">- magna non</p>
+        </div>
+        <button class="prev" onclick="plusSlides(-1)">❮</button>
+        <button class="next" onclick="plusSlides(1)">❯</button>
+      </div>
+    </div>
+    <div class="project">
+      <h1>Projects</h1>
+      <div class="row">
+      <div class="column"><div class="images"><a href="https://kidssearch.com/picsearch/images/puppy-pic-1024x768-07321a7.png"><img src="https://kidssearch.com/picsearch/images/puppy-pic-1024x768-07321a7.png" /></a></div></div>
+      <div class="column"><div class="images"><a href="https://dogtime.com/assets/uploads/2018/10/puppies-cover.jpg"><img src="https://dogtime.com/assets/uploads/2018/10/puppies-cover.jpg"/></a></div></div>
+      <div class="column"><div class="images"><a href="https://i.pinimg.com/originals/ec/a4/7c/eca47cc55cf39c93de36e19e5e383761.jpg"><img src="https://i.pinimg.com/originals/ec/a4/7c/eca47cc55cf39c93de36e19e5e383761.jpg"/></a></div></div>
+    </div>
+    </div>
+
+  
+    </div>
+    <div style="text-align: center; width: 70%; margin: auto;"><h1> Contact Us</h1></div>
+    <div id="contact" style="text-align: center; width: 70%; margin: auto;">
+    <form action="https://postmail.invotes.com/send"
+    method="post" id="email_form">
+
+    <input type="text" name="subject" placeholder="Subject" />
+    <textarea name="text" placeholder="Message"></textarea>
+    <input type="hidden" name="access_token" value="tna86bo91l07fd8hw5egsopi" />
+  
+    <input type="hidden" name="success_url" value=".?message=Email+Successfully+Sent%21&isError=0" />
+    <input type="hidden" name="error_url" value=".?message=Email+could+not+be+sent.&isError=1" />
+   
+
+   
+    <input id="submit_form" type="submit" value="Send" />
+</form>
+</div>
+     
+<!-- optional, prevents the submit button from being pressed more than once -->
+<script>
+    var submitButton = document.getElementById("submit_form");
+    var form = document.getElementById("email_form");
+    form.addEventListener("submit", function (e) {
+        setTimeout(function() {
+            submitButton.value = "Sending...";
+            submitButton.disabled = true;
+        }, 1);
+    });
+</script> 
+
+    
+  <footer> 
+    <div class="footer-basic">
+      <footer>
+          <div class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a></div>
+          <ul class="list-inline">
+              <li class="list-inline-item"><a href="#">Home</a></li>
+              <li class="list-inline-item"><a href="#">Services</a></li>
+              <li class="list-inline-item"><a href="#">About</a></li>
+              <li class="list-inline-item"><a href="#">Terms</a></li>
+              <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+          </ul>
+          <p class="copyright">Company Name © 2018</p>
+      </footer>
+  </div>
+  </footer>
+      
+  </body>
+
+  <script src="main.js"></script>
+</html>
